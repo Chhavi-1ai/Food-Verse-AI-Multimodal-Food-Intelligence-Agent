@@ -1,0 +1,122 @@
+/* Card hover animations */
+.hover-card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Nav Link Hover */
+.nav-link-item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+/* Dropzone hover */
+.upload-dropzone:hover {
+  border-color: #16a34a !important;
+  background-color: #f0fdf4 !important;
+}
+
+/* Table row hover */
+.history-table-row {
+  transition: background-color 0.15s ease;
+}
+
+.history-table-row:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Recipe card hover */
+.recipe-grid-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -4px rgba(22, 101, 52, 0.12);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+main {
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Responsive Mobile Layout */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  .mobile-close-btn {
+    display: block !important;
+  }
+
+  .main-content-wrapper {
+    margin-left: 0 !important;
+  }
+
+  .mobile-menu-trigger {
+    display: flex !important;
+  }
+
+  .cooking-assistant-grid {
+    grid-templateColumns: 1fr !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-menu-trigger {
+    display: none !important;
+  }
+
+  .sidebar-backdrop {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-container {
+    padding: 16px !important;
+  }
+
+  .welcome-banner {
+    padding: 20px !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+
+  .banner-actions {
+    width: 100%;
+  }
+
+  .banner-actions button {
+    flex: 1;
+    justify-content: center;
+  }
+}
